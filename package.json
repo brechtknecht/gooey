@@ -11,12 +11,17 @@
     "animation",
     "webgl"
   ],
+  "license": "MIT",
+  "author": "Felix Tesche",
+  "homepage": "https://github.com/brechtknecht/gooey#readme",
+  "bugs": "https://github.com/brechtknecht/gooey/issues",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/brechtknecht/gooey.git"
   },
   "type": "module",
   "sideEffects": false,
+  "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -30,10 +35,14 @@
   ],
   "scripts": {
     "dev": "vite playground",
-    "build": "tsc -p tsconfig.build.json",
+    "build": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\" && tsc -p tsconfig.build.json",
     "build:playground": "vite build playground",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "peerDependencies": {
     "react": ">=18"

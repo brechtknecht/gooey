@@ -122,3 +122,7 @@ Tune the springs, switch variants, and copy the resulting `<Goo>` props from the
 | `npm run build:playground` | Build the playground as a static site into `playground/dist/`. |
 | `npm test` | Run the unit tests. |
 | `npm run typecheck` | Type-check the library, tests and playground. |
+
+## License
+
+MIT
