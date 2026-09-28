@@ -1,0 +1,52 @@
+{
+  "name": "@brechtknecht/gooey",
+  "version": "0.1.0",
+  "description": "Liquid metaball transitions between any React elements, driven by springs and velocity.",
+  "keywords": [
+    "react",
+    "metaballs",
+    "goo",
+    "gooey",
+    "spring",
+    "animation",
+    "webgl"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brechtknecht/gooey.git"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite playground",
+    "build": "tsc -p tsconfig.build.json",
+    "build:playground": "vite build playground",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.1",
+    "vitest": "^5.0.2"
+  }
+}
